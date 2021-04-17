@@ -102,7 +102,15 @@ const useStyles = makeStyles(theme => ({
     position: 'absolute',
     boxShadow: theme.shadows[10],
     borderRadius: 15,
-    padding: '10em'
+    padding: '10em',
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: '8em',
+      paddingBottom: '8em',
+      paddingLeft: 0,
+      paddingRight: 0,
+      borderRadius: 0,
+      width: '100%'
+    }
   }
 }));
 
@@ -259,7 +267,7 @@ export default function LandingPage() {
       <Grid item>
         <Grid 
           container 
-          style={{height: '100em'}} 
+          style={{height: '100em', marginTop: '12em'}} 
           alignItems='center' 
           justify='center'
         >
@@ -267,7 +275,7 @@ export default function LandingPage() {
             <CardContent>
               <Grid container direction='column' style={{textAlign: 'center'}}>
                 <Grid item>
-                  <Typography varient='h3'>
+                  <Typography variant='h3' gutterBottom>
                     The Revolution
                   </Typography>
                 </Grid>
