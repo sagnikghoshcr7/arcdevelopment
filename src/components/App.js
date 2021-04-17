@@ -1,29 +1,65 @@
-import React from 'react';
-import { ThemeProvider } from '@material-ui/styles';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import theme from './ui/Theme';
-import Header from '../components/ui/Header';
+import Header from './ui/Header';
+import Footer from './ui/Footer';
 
-function App() {
+import { ThemeProvider } from '@material-ui/styles';
+
+const App = () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [value, setValue] = useState(0);
+
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Header />
+        <Header
+          value={value}
+          setValue={setValue}
+          selectedIndex={selectedIndex}
+          setSelectedIndex={setSelectedIndex}
+        />
         <Switch>
-          <Route exact path="/" component={() => <div>Home</div>} />
-          <Route exact path="/services" component={() => <div>Services</div>} />
-          <Route exact path="/customsoftware" component={() => <div>Custom Software</div>} />
-          <Route exact path="/mobileapps" component={() => <div>Mobile Apps</div>} />
-          <Route exact path="/websites" component={() => <div>Websites</div>} />
-          <Route exact path="/revolution" component={() => <div>Revolution</div>} />
-          <Route exact path="/about" component={() => <div>About</div>} />
-          <Route exact path="/contact" component={() => <div>Contact</div>} />
-          <Route exact path="/estimate" component={() => <div>Estimate</div>} />
+          <Route
+            path="/"
+            exact
+            component={() => <div style={{ height: '2000px' }}>Home</div>}
+          />
+          <Route path="/services" exact component={() => <div>Services</div>} />
+          <Route
+            path="/revolution"
+            exact
+            component={() => <div>Revolution</div>}
+          />
+          <Route path="/about" exact component={() => <div>About Us</div>} />
+          <Route
+            path="/contact"
+            exact
+            component={() => <div>Contact Us</div>}
+          />
+          <Route path="/estimate" exact component={() => <div>Estimate</div>} />
+          <Route
+            path="/customsoftware"
+            exact
+            component={() => <div>Custom Software</div>}
+          />
+          <Route
+            path="/mobileapps"
+            exact
+            component={() => <div>Mobile Apps</div>}
+          />
+          <Route path="/websites" exact component={() => <div>Websites</div>} />
         </Switch>
+        <Footer
+          value={value}
+          setValue={setValue}
+          selectedIndex={selectedIndex}
+          setSelectedIndex={setSelectedIndex}
+        />
       </BrowserRouter>
     </ThemeProvider>
   );
-}
+};
 
 export default App;
