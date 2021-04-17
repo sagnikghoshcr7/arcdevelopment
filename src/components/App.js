@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import theme from './ui/Theme';
 import Header from './ui/Header';
 import Footer from './ui/Footer';
+import LandingPage from '../components/LandingPage';
 
 import { ThemeProvider } from '@material-ui/styles';
 
@@ -24,7 +25,7 @@ const App = () => {
           <Route
             path="/"
             exact
-            component={() => <div style={{ height: '2000px' }}>Home</div>}
+            component={LandingPage}
           />
           <Route path="/services" exact component={() => <div>Services</div>} />
           <Route

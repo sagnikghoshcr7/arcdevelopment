@@ -134,13 +134,13 @@ export default function Footer(props) {
             className={classes.adornment}
         />
         <Grid container justify='flex-end' className={classes.socialcontainer}>
-            <Grid item component={"a"} href="http://www.facebook.com" rel='noopener noreferrer' target='_blank'>
+            <Grid item component={"a"} href="https://www.facebook.com/profile.php?id=100036939404474" rel='noopener noreferrer' target='_blank'>
                 <img alt='facebook logo' src={facebook} className={classes.icon} />
             </Grid>
-            <Grid item component={"a"} href='http://www.twitter.com' rel='noopener noreferrer' target='_blank'>
+            <Grid item component={"a"} href='https://twitter.com/sagnikghoshcr7' rel='noopener noreferrer' target='_blank'>
                 <img alt='twitter logo' src={twitter} className={classes.icon} />
             </Grid>
-            <Grid item component={"a"} href='http://www.instagram.com' rel='noopener noreferrer' target='_blank'>
+            <Grid item component={"a"} href='https://www.instagram.com/sagnikghoshcr7' rel='noopener noreferrer' target='_blank'>
                 <img alt='instagram logo' src={instagram} className={classes.icon} />
             </Grid>
         </Grid>
