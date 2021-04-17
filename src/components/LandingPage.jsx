@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Lottie from 'react-lottie';
 
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -153,6 +154,8 @@ export default function LandingPage() {
             <Grid container justify='center' className={classes.buttonContainer}>
               <Grid item>
                 <Button
+                  component={Link}
+                  to='/estimate'
                   className={classes.estimateButton}
                   variant='contained'
                 >
@@ -160,7 +163,12 @@ export default function LandingPage() {
                 </Button>
               </Grid>
               <Grid item>
-                <Button variant='outlined' className={classes.learnButtonHero}>
+                <Button
+                  component={Link}
+                  to='/revolution'
+                  variant='outlined'
+                  className={classes.learnButtonHero}
+                >
                   <span style={{marginRight: 10}}>Learn More</span>
                   <ButtonArrow width={15} height={15} fill={theme.palette.common.blue} />
                 </Button>
@@ -196,7 +204,12 @@ export default function LandingPage() {
               Complete digital solutions, from investigations to{" "}
               <span className={classes.specialText}>celebration.</span>
             </Typography>
-            <Button variant='outlined' className={classes.learnButton}>
+            <Button
+              component={Link}
+              to='/customsoftware'
+              variant='outlined'
+              className={classes.learnButton}
+            >
               <span style={{marginRight: 10}}>Learn More</span>
               <ButtonArrow width={10} height={10} fill={theme.palette.common.blue} />
             </Button>
@@ -229,7 +242,12 @@ export default function LandingPage() {
             <Typography variant='subtitle1'>
               Integrate your web experience or create a standalone app{matchesSM ? null : <br />}with eather mobile platform.
             </Typography>
-            <Button variant='outlined' className={classes.learnButton}>
+            <Button
+              component={Link}
+              to='/mobileapps'
+              variant='outlined'
+              className={classes.learnButton}
+            >
             <span style={{marginRight: 10}}>Learn More</span>
             <ButtonArrow width={10} height={10} fill={theme.palette.common.blue} />
             </Button>
@@ -262,7 +280,12 @@ export default function LandingPage() {
             <Typography variant='subtitle1'>
               Optimised for Search Engines, built for speed.
             </Typography>
-            <Button variant='outlined' className={classes.learnButton}>
+            <Button
+              component={Link}
+              to='/websites'
+              variant='outlined'
+              className={classes.learnButton}
+            >
             <span style={{marginRight: 10}}>Learn More</span>
             <ButtonArrow width={10} height={10} fill={theme.palette.common.blue} />
             </Button>
@@ -296,7 +319,12 @@ export default function LandingPage() {
                   <Typography variant='subtitle1'>
                     Visionary insights coupled with cutting-edge technology is a recipe for revolution.
                   </Typography>
-                  <Button variant='outlined' className={classes.learnButtonHero}>
+                  <Button
+                    component={Link}
+                    to='/revolution'
+                    variant='outlined'
+                    className={classes.learnButtonHero}
+                  >
                     <span style={{marginRight: 10}}>Learn More</span>
                     <ButtonArrow width={15} height={15} fill={theme.palette.common.blue} />
                   </Button>
@@ -327,7 +355,13 @@ export default function LandingPage() {
                 <Typography variant='h2' style={{color: 'white'}}>About Us</Typography>
                 <Typography variant='subtitle2'>Let's get personal.</Typography>
                 <Grid item>
-                  <Button variant='outlined' style={{color: 'white', borderColor: 'white'}} className={classes.learnButton}>
+                  <Button
+                    component={Link}
+                    to='/about'
+                    variant='outlined'
+                    style={{color: 'white', borderColor: 'white'}}
+                    className={classes.learnButton}
+                  >
                     <span style={{marginRight: 10}}>Learn More</span>
                     <ButtonArrow width={10} height={10} fill='white' />
                   </Button>
@@ -339,7 +373,13 @@ export default function LandingPage() {
                 <Typography variant='h2' style={{color: 'white'}}>Contact Us</Typography>
                 <Typography variant='subtitle2'>Say hello! <span role='img' aria-label='waving hand'>👋</span></Typography>
                 <Grid item>
-                  <Button variant='outlined' style={{color: 'white', borderColor: 'white'}} className={classes.learnButton}>
+                  <Button
+                    component={Link}
+                    to='/contact'
+                    variant='outlined'
+                    style={{color: 'white', borderColor: 'white'}}
+                    className={classes.learnButton}
+                  >
                     <span style={{marginRight: 10}}>Learn More</span>
                     <ButtonArrow width={10} height={10} fill='white' />
                   </Button>
