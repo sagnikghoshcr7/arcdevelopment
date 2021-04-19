@@ -43,9 +43,9 @@ const useStyles = makeStyles(theme => ({
 }))
 
 export default function Services(props) {
-  const classes = useStyles()
-  const theme = useTheme()
-  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'))
+  const classes = useStyles();
+  const theme = useTheme();
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <Grid container direction='column'>
