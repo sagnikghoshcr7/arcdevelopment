@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: '1.5em',
       paddingRight: '1.5em',
     }
-  },
+  }
 }));
 
 export default function Revolution() {
