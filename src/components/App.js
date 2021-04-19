@@ -7,6 +7,7 @@ import Footer from './ui/Footer';
 import LandingPage from './LandingPage';
 import Services from './Services';
 import CustomSoftware from './CustomSoftware';
+import MobileApps from './MobileApps';
 
 import { ThemeProvider } from '@material-ui/styles';
 
@@ -72,7 +73,13 @@ const App = () => {
           <Route
             path="/mobileapps"
             exact
-            component={() => <div>Mobile Apps</div>}
+            render={(props) => (
+              <MobileApps
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
           />
           <Route path="/websites" exact component={() => <div>Websites</div>} />
         </Switch>
