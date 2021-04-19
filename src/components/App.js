@@ -8,6 +8,7 @@ import LandingPage from './LandingPage';
 import Services from './Services';
 import CustomSoftware from './CustomSoftware';
 import MobileApps from './MobileApps';
+import Websites from './Websites';
 
 import { ThemeProvider } from '@material-ui/styles';
 
@@ -81,7 +82,17 @@ const App = () => {
               />
             )}
           />
-          <Route path="/websites" exact component={() => <div>Websites</div>} />
+          <Route
+            path="/websites"
+            exact
+            render={(props) => (
+              <Websites
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
+          />
         </Switch>
         <Footer
           setValue={setValue}
