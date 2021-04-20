@@ -2,8 +2,12 @@ import React from 'react';
 import {makeStyles, useTheme} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Avatar from '@material-ui/core/Avatar';
 
 import history from '../assets/history.svg';
+import profile from '../assets/founder.jpg';
+import yearbook from '../assets/yearbook.svg';
+import puppy from '../assets/puppy.svg';
 
 const useStyles = makeStyles(theme => ({
   missionStatement: {
@@ -20,6 +24,10 @@ const useStyles = makeStyles(theme => ({
       paddingLeft: '1.5em',
       paddingRight: '1.5em',
     }
+  },
+  avatar: {
+    height: '25em',
+    width: '25em'
   }
 }));
 
@@ -78,6 +86,50 @@ export default function About() {
               alt="quill pen sitting on the top of the book"
               style={{maxHeight: '22em'}}
             />
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid item container direction='column' alignItems='center' className={classes.rowContainer}> 
+        <Grid item>
+          <Typography align='center' variant='h4' gutterBottom>
+            Team
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant='body1' paragraph align='center'>
+            Zachary Reece, Founder
+          </Typography>
+          <Typography variant='body1' paragraph align='center'>
+            I started coding when I was 9 years old.
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Avatar alt="founder" src={profile} className={classes.avatar} />
+        </Grid>
+        <Grid item container>
+          <Grid item container direction='column' lg>
+            <Grid item>
+              <img src={yearbook} alt="yearbook page about founder" />
+            </Grid>
+            <Grid item>
+              <Typography variant='caption'>a page from my Sophmore yearbook</Typography>
+            </Grid>
+          </Grid>
+          <Grid item lg style={{maxWidth: '45em', padding: '1.25em'}}>
+            <Typography variant='body1' align='center' paragraph>
+              I taught myself basic coding from a library book in third grade, and ever since then my passion has solely been set on learning — learning about computers, learning mathematics and philosophy, studying design, always just learning.
+            </Typography>
+            <Typography variant='body1' align='center' paragraph>
+              Now I’m ready to apply everything I’ve learned, and to help others with the intuition I have developed.
+            </Typography>
+          </Grid>
+          <Grid item container direction='column' lg alignItems='flex-end'>
+            <Grid item>
+              <img src={puppy} alt="grey spotted puppy" />
+            </Grid>
+            <Grid item>
+              <Typography variant='caption'>my signature dapple dachshund, Sterling</Typography>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
