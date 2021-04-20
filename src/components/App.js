@@ -11,6 +11,7 @@ import MobileApps from './MobileApps';
 import Websites from './Websites';
 import Revolution from './Revolution';
 import About from './About';
+import Contact from './Contact';
 
 import { ThemeProvider } from '@material-ui/styles';
 
@@ -75,7 +76,13 @@ const App = () => {
           <Route
             path="/contact"
             exact
-            component={() => <div>Contact Us</div>}
+            render={(props) => (
+              <Contact
+                {...props}
+                setValue={setValue}
+                setSelectedIndex={setSelectedIndex}
+              />
+            )}
           />
           <Route path="/estimate" exact component={() => <div>Estimate</div>} />
           <Route
