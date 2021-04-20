@@ -284,7 +284,7 @@ export default function Revolution() {
           </Grid>
         </Grid>
         <Grid item lg style={{alignSelf: 'center'}}>
-          <img src={design} alt="paintbrush leaving stroke of paint" style={{maxWidth: 1000}} />
+          <img src={design} alt="paintbrush leaving stroke of paint" width='100%' style={{maxWidth: 1000}} />
         </Grid>
       </Grid>
       <Grid
@@ -315,7 +315,7 @@ export default function Revolution() {
           </Grid>
         </Grid>
         <Grid item lg style={{alignSelf: 'center'}}>
-          <img src={review} alt="magnifying glass" />
+          <img src={review} alt="magnifying glass" width='100%' />
         </Grid>
       </Grid>
       <Grid
@@ -374,7 +374,7 @@ export default function Revolution() {
               variant='h4'
               align={matchesMD ? 'center' : undefined}
               gutterBottom
-              style={{color: '#000', marginTop: '5em'}}
+              style={{ color: '#000', marginTop: matchesMD ? 0 : '2em' }}
             >
               Launch
             </Typography>
@@ -392,7 +392,7 @@ export default function Revolution() {
           </Grid>
         </Grid>
         <Grid item lg style={{alignSelf: 'center'}}>
-          <img src={launch} alt="rocket" width='100%' style={{maxWidth: 200}} />
+          <img src={launch} alt="rocket" style={{maxWidth: 200}} width='100%' />
         </Grid>
       </Grid>
       <Grid
