@@ -164,7 +164,9 @@ export default function Contact(props) {
                   variant="body1"
                   style={{color: theme.palette.common.blue, fontSize: '1rem'}}
                 >
-                  (+91) 7044941540
+                  <a href="tel:7044941540" style={{textDecoration: 'none', color: 'inherit'}}>
+                    (+91) 7044941540
+                  </a>
                 </Typography>
               </Grid>
             </Grid>
@@ -181,7 +183,9 @@ export default function Contact(props) {
                   variant="body1"
                   style={{color: theme.palette.common.blue, fontSize: '1rem'}}
                 >
-                  sagnikghoshmandra@gmail.com
+                  <a href="mailto:sagnikghoshmandra@gmail.com" style={{textDecoration: 'none', color: 'inherit'}}>
+                    sagnikghoshmandra@gmail.com
+                  </a>
                 </Typography>
               </Grid>
             </Grid>
@@ -231,7 +235,18 @@ export default function Contact(props) {
               />
             </Grid>
             <Grid item container justify='center' style={{marginTop: '2em'}}>
-              <Button variant='contained' className={classes.sendButton}>
+              <Button
+                disabled={
+                  name.length === 0 ||
+                  message.length === 0 ||
+                  phone.length === 0 ||
+                  email.length === 0 ||
+                  phoneHelper.length !== 0 ||
+                  emailHelper.length !== 0
+                }
+                variant='contained'
+                className={classes.sendButton}
+              >
                 Send Message
                 <img
                   src={airplane}
